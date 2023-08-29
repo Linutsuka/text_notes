@@ -1,0 +1,7 @@
+play;100
+something;75
+hi;75
+hey;75
+heyhjvfvjkj,n,mm,mmbmmbmbmmbmmbmbm;75
+jgjn;75
+endFile

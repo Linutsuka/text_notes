@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="604.0" prefWidth="381.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.noteapp.PrincipalController">
+   <children>
+      <TableView fx:id="table" layoutX="15.0" layoutY="112.0" onMouseClicked="#deleteMode" prefHeight="350.0" prefWidth="354.0">
+        <columns>
+          <TableColumn fx:id="columnOne" prefWidth="267.20001220703125" text="Description" />
+          <TableColumn fx:id="columnTwo" minWidth="0.0" prefWidth="85.60001220703123" text="THING" />
+        </columns>
+      </TableView>
+      <ImageView fitHeight="51.0" fitWidth="55.0" layoutX="50.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@building_1.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="inputText" layoutX="23.0" layoutY="476.0" prefHeight="51.0" prefWidth="182.0" />
+      <Button fx:id="inputButton" layoutX="294.0" layoutY="476.0" mnemonicParsing="false" onMouseClicked="#onClickPut" prefHeight="51.0" prefWidth="71.0" text="PUT" />
+      <Button fx:id="deleteButton" layoutX="311.0" layoutY="16.0" mnemonicParsing="false" onMouseClicked="#onClickDelete" text="OFF" />
+      <Label fx:id="text" layoutX="214.0" layoutY="20.0" text="Delete mode:" />
+      <ComboBox fx:id="selectP" layoutX="214.0" layoutY="476.0" prefHeight="51.0" prefWidth="67.0">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="100" />
+               <String fx:value="75" />
+               <String fx:value="50" />
+               <String fx:value="25" />
+               <String fx:value="0" />
+               </FXCollections>
+         </items>
+      </ComboBox>
+      <ComboBox fx:id="selectG" layoutX="146.0" layoutY="71.0" prefHeight="26.0" prefWidth="131.0">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="default" />
+            </FXCollections>
+         </items>
+   </ComboBox>
+      <Button fx:id="selectButton" layoutX="295.0" layoutY="70.0" mnemonicParsing="false" onAction="#onClickSelect" prefHeight="26.0" prefWidth="67.0" text="Select" />
+      <Button fx:id="saveButton" layoutX="23.0" layoutY="538.0" mnemonicParsing="false" onAction="#onClickSave" prefHeight="51.0" prefWidth="344.0" text="SAVE" />
+      <Button fx:id="createButton" layoutX="30.0" layoutY="72.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="94.0" text="CREATE" onAction="#onClickCreate" />
+   </children>
+</AnchorPane>
